@@ -635,53 +635,16 @@
             </svg>
 
             <span
-              class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"
+              class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"
             ></span>
 
             <div class="jarallax-img">
-              <video
-                class="w-100 h-100"
-                autoplay
-                loop
-                muted
-                playsinline
-                preload="auto"
-                style="object-fit: cover"
-              >
-                <source src="assets/video/herovideo04.mp4" type="video/mp4" />
-              </video>
+              <img
+                src="./assets/img/landing/insurance/hero/hero.jpg"
+                class="img-fluid"
+                alt=""
+              />
             </div>
-
-            <script>
-              document.addEventListener("DOMContentLoaded", function () {
-                const lazyVideos =
-                  document.querySelectorAll("video.lazy-video");
-
-                if ("IntersectionObserver" in window) {
-                  const videoObserver = new IntersectionObserver(
-                    (entries, observer) => {
-                      entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                          const video = entry.target;
-                          const source = video.querySelector("source");
-
-                          // Move data-src to src
-                          if (source && source.dataset.src) {
-                            source.src = source.dataset.src;
-                            video.load();
-                            video.play();
-                          }
-
-                          videoObserver.unobserve(video);
-                        }
-                      });
-                    }
-                  );
-
-                  lazyVideos.forEach((video) => videoObserver.observe(video));
-                }
-              });
-            </script>
           </div>
 
           <!-- https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YnVzaW5lc3MlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000 -->
