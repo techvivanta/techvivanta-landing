@@ -1,4 +1,4 @@
-const emailAddressSmtp = "hiren.techvivanta@gmail.com"
+const emailAddressSmtp = "techvivanta.app@gmail.com"
 
 document.addEventListener("DOMContentLoaded", () => {
   /* -------------------------
