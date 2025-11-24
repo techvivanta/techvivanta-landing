@@ -207,7 +207,7 @@
       rel="stylesheet"
       id="google-font"
     />
- 
+
     <!-- bootstrap icons -->
     <link
       rel="stylesheet"
@@ -1181,8 +1181,7 @@
         >
           <h2 class="h1 mb-0">Our skills</h2>
 
-          
-          <div class="d-flex">
+          <!-- <div class="d-flex">
             <button
               class="btn btn-sm btn-icon btn-outline-primary rounded-circle"
               type="button"
@@ -1199,25 +1198,30 @@
             >
               <i class="ai-arrow-right"></i>
             </button>
-          </div>
+          </div> -->
         </div>
 
-       
         <div class="container">
           <div
             class="swiper"
             data-swiper-options='{
-            "slidesPerView": "auto",
-            "spaceBetween": 24,
-            "loop": true,
-            "navigation": {
-              "prevEl": "#prev-skill",
-              "nextEl": "#next-skill"
-            }
-          }'
+  "slidesPerView": "auto",
+  "spaceBetween": 24,
+  "loop": true,
+  "speed": 5000,
+  "autoplay": {
+    "delay": 0,
+    "disableOnInteraction": false
+  },
+  "freeMode": true,
+  "freeModeMomentum": false,
+  "navigation": {
+    "prevEl": "#prev-skill",
+    "nextEl": "#next-skill"
+  }
+}'
           >
             <div class="swiper-wrapper text-center">
-              
               <div class="swiper-slide w-sm-auto h-auto">
                 <div
                   class="card card-flip card-hover border-0 w-sm-auto h-100 bg-secondary rounded-5"
@@ -1272,6 +1276,61 @@
                   </div>
                 </div>
               </div>
+              <!-- flutter card -->
+              <div class="swiper-slide w-sm-auto h-auto">
+                <div
+                  class="card card-flip card-hover border-0 w-sm-auto h-100 bg-secondary rounded-5"
+                >
+                  <div class="card-flip-inner mx-auto" style="max-width: 306px">
+                    <div class="card-flip-front p-0">
+                      <div
+                        class="card-body d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 opacity-100"
+                      >
+                        <img
+                          src="assets/img/landing/web-studio/skills/flutter.svg"
+                          width="72"
+                          alt="Flutter"
+                        />
+                      </div>
+                    </div>
+                    <div class="card-flip-back p-0 bg-transparent">
+                      <div
+                        class="card-body d-flex flex-column justify-content-center align-items-center h-100"
+                      >
+                        <img
+                          src="assets/img/landing/web-studio/skills/flutter.svg"
+                          width="52"
+                          alt="Flutter"
+                        />
+                        <p class="fs-sm pt-3 mb-0">
+                          Flutter is Google's UI toolkit for building natively
+                          compiled applications for mobile, web, and desktop
+                          from a single codebase. It uses the Dart programming
+                          language.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide w-sm-auto h-auto">
+  <div class="card border-0 bg-secondary h-100">
+    <div class="card-body mx-auto" style="max-width: 416px">
+      <p class="fs-lg mb-1">
+       "TechVivanta delivered our Canchhelo smart hotel booking app with speed  
+and precision. Their Flutter expertise stood out, and the entire  
+experience was smooth and efficient."
+
+      </p>
+      <img
+        src="assets/img/brands/canchelloLogo.png"
+        class=""
+        width="100"
+        alt="Canchhelo"
+      />
+    </div>
+  </div>
+</div>
 
               <div class="swiper-slide w-sm-auto h-auto">
                 <div
@@ -1327,7 +1386,61 @@
                   </div>
                 </div>
               </div>
-
+              <!-- react card -->
+              <div class="swiper-slide w-sm-auto h-auto">
+                <div
+                  class="card card-flip card-hover border-0 w-sm-auto h-100 bg-secondary rounded-5"
+                >
+                  <div class="card-flip-inner mx-auto" style="max-width: 306px">
+                    <div class="card-flip-front p-0">
+                      <div
+                        class="card-body d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 opacity-100"
+                      >
+                        <img
+                          src="assets/img/landing/web-studio/skills/React.svg"
+                          width="72"
+                          alt="React"
+                        />
+                      </div>
+                    </div>
+                    <div class="card-flip-back p-0 bg-transparent">
+                      <div
+                        class="card-body d-flex flex-column justify-content-center align-items-center h-100"
+                      >
+                        <img
+                          src="assets/img/landing/web-studio/skills/React.svg"
+                          width="52"
+                          alt="React"
+                        />
+                        <p class="fs-sm pt-3 mb-0">
+                          React is a JavaScript library for building user
+                          interfaces, particularly web applications. It allows
+                          developers to create reusable UI components and manage
+                          application state efficiently.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide w-sm-auto h-auto">
+                <div class="card border-0 bg-secondary h-100">
+                  <div class="card-body mx-auto" style="max-width: 416px">
+                    <p class="fs-lg mb-1">
+                      "My collaboration with TechVivanta on AnuchitraKala was
+                      smooth and impactful. The team delivered high-quality work
+                      on time and truly understood our vision for showcasing
+                      Indian art."
+                    </p>
+                    <img
+                      src="assets/img/brands/anuchitrakalaLogo.png"
+                      class=""
+                      width="50"
+                      alt="AnuchitraKala"
+                    />
+                  </div>
+                </div>
+              </div>
               <div class="swiper-slide w-sm-auto h-auto">
                 <div
                   class="card card-flip card-hover border-0 w-sm-auto h-100 bg-secondary rounded-5"
