@@ -14,7 +14,7 @@
 
     <meta
       name="description"
-      content="TechVivanta delivers trusted IT solutions, including web and mobile app development, AI services, and enterprise software to support business growth."
+      content="TechVivanta is your trusted IT and software solutions partner. We deliver web and mobile app development, AI solutions, and enterprise software tailored to your business growth."
     />
 
     <meta
@@ -303,6 +303,27 @@
       }
       [data-bs-theme="dark"] .page-spinner {
         background-color: rgba(255, 255, 255, 0.25);
+      }
+      .icon-container {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: #f8f9fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        color: #32a854;
+        font-size: 1.8rem;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .icon-container:hover {
+        background-color: #32a854;
+        color: white;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(50, 168, 84, 0.3);
       }
       @-webkit-keyframes spinner {
         0% {
@@ -684,11 +705,15 @@
             </div>
           </div>
         </div>
-        <div class="container position-relative py-4 mt-4 z-5">
+
+        <div class="container position-relative py-3 mt-4 z-5">
           <div class="row g-3 bg-white rounded-5 shadow">
             <div
               class="col-12 col-md-4 p-5 border-bottom border-bottom-md-0 border-end-md"
             >
+              <div class="icon-container mb-3">
+                <i class="bi bi-pc-display"></i>
+              </div>
               <h4 class="text-center custom-font fs-3">Solutions</h4>
               <p class="text-center">
                 Smart fleet solution to drive safety efficiency, and
@@ -698,12 +723,18 @@
             <div
               class="col-12 col-md-4 p-5 border-bottom border-bottom-md-0 border-end-md"
             >
+              <div class="icon-container mb-3">
+                <i class="bi bi-cpu"></i>
+              </div>
               <h4 class="text-center custom-font fs-3">Technology</h4>
               <p class="text-center">
                 Fleet management technology to track and optimise your vehicles.
               </p>
             </div>
             <div class="col-12 col-md-4 p-5">
+              <div class="icon-container mb-3">
+                <i class="bi bi-rocket-takeoff"></i>
+              </div>
               <h4 class="text-center custom-font fs-3">Deliveries</h4>
               <p class="text-center">
                 Our innovative approach ensures timely deliveries and
@@ -715,11 +746,11 @@
       </section>
 
       <div class="container py-5 mt-2 mt-sm-3 mt-md-4">
-        <!-- Multiple slides responsive slider with external Prev / Next buttons and bullets outside -->
         <div class="position-relative px-5">
           <!-- Slider with Autoplay -->
-          <h2 class="h1 text-center pt-lg-3">Technologies We Work With</h2>
-
+          <div class="mb-5">
+            <h2 class="h1 text-center pt-lg-3">Technologies We Work With</h2>
+          </div>
           <div
             class="swiper"
             style="
@@ -1150,7 +1181,7 @@
         >
           <h2 class="h1 mb-0">Our skills</h2>
 
-          <!-- Slider control buttons (Prev / Next) -->
+          
           <div class="d-flex">
             <button
               class="btn btn-sm btn-icon btn-outline-primary rounded-circle"
@@ -1171,7 +1202,7 @@
           </div>
         </div>
 
-        <!-- Swiper slider -->
+       
         <div class="container">
           <div
             class="swiper"
@@ -1186,7 +1217,7 @@
           }'
           >
             <div class="swiper-wrapper text-center">
-              <!-- Item -->
+              
               <div class="swiper-slide w-sm-auto h-auto">
                 <div
                   class="card card-flip card-hover border-0 w-sm-auto h-100 bg-secondary rounded-5"
@@ -1223,7 +1254,6 @@
                 </div>
               </div>
 
-              <!-- Item -->
               <div class="swiper-slide w-sm-auto h-auto">
                 <div class="card border-0 bg-secondary h-100">
                   <div class="card-body mx-auto" style="max-width: 416px">
@@ -1243,7 +1273,6 @@
                 </div>
               </div>
 
-              <!-- Item -->
               <div class="swiper-slide w-sm-auto h-auto">
                 <div
                   class="card card-flip card-hover border-0 w-sm-auto h-100 bg-secondary rounded-5"
@@ -1280,7 +1309,6 @@
                 </div>
               </div>
 
-              <!-- Item -->
               <div class="swiper-slide w-sm-auto h-auto">
                 <div class="card border-0 bg-secondary h-100">
                   <div class="card-body mx-auto" style="max-width: 416px">
@@ -1300,7 +1328,6 @@
                 </div>
               </div>
 
-              <!-- Item -->
               <div class="swiper-slide w-sm-auto h-auto">
                 <div
                   class="card card-flip card-hover border-0 w-sm-auto h-100 bg-secondary rounded-5"
@@ -1337,7 +1364,6 @@
                 </div>
               </div>
 
-              <!-- Item -->
               <div class="swiper-slide w-sm-auto h-auto">
                 <div class="card border-0 bg-secondary h-100">
                   <div class="card-body mx-auto" style="max-width: 416px">
@@ -1357,7 +1383,6 @@
                 </div>
               </div>
 
-              <!-- Item -->
               <div class="swiper-slide w-sm-auto h-auto">
                 <div
                   class="card card-flip card-hover border-0 w-sm-auto h-100 bg-secondary rounded-5"
@@ -1393,7 +1418,6 @@
                 </div>
               </div>
 
-              <!-- Item-->
               <div class="swiper-slide w-sm-auto h-auto">
                 <div class="card border-0 bg-secondary h-100">
                   <div class="card-body mx-auto" style="max-width: 416px">
@@ -1414,7 +1438,6 @@
                 </div>
               </div>
 
-              <!-- Item -->
               <div class="swiper-slide w-sm-auto h-auto">
                 <div
                   class="card card-flip card-hover border-0 w-sm-auto h-100 bg-secondary rounded-5"
@@ -1451,7 +1474,6 @@
                 </div>
               </div>
 
-              <!-- Item-->
               <div class="swiper-slide w-sm-auto h-auto">
                 <div class="card border-0 bg-secondary h-100">
                   <div class="card-body mx-auto" style="max-width: 416px">
@@ -1489,22 +1511,22 @@
         >
           <li class="nav-item mb-0" role="presentation">
             <a
-              class="nav-link px-3"
+              class="nav-link active px-3"
               href="#all-services"
               data-bs-toggle="tab"
               role="tab"
-              aria-selected="false"
+              aria-selected="true"
             >
               All Services
             </a>
           </li>
           <li class="nav-item mb-0" role="presentation">
             <a
-              class="nav-link active px-3"
+              class="nav-link px-3"
               href="#web-development"
               data-bs-toggle="tab"
               role="tab"
-              aria-selected="true"
+              aria-selected="false"
               >Web Development</a
             >
           </li>
@@ -1556,7 +1578,11 @@
         </ul>
 
         <div class="tab-content">
-          <div class="tab-pane fade" id="all-services" role="tabpanel">
+          <div
+            class="tab-pane fade show active"
+            id="all-services"
+            role="tabpanel"
+          >
             <div class="row align-items-lg-center">
               <div class="col-md-6 pb-4 pb-md-0 mb-2 mb-md-0">
                 <img
@@ -1621,11 +1647,7 @@
             </div>
           </div>
 
-          <div
-            class="tab-pane fade show active"
-            id="web-development"
-            role="tabpanel"
-          >
+          <div class="tab-pane fade" id="web-development" role="tabpanel">
             <div class="row align-items-lg-center">
               <div class="col-md-6 pb-4 pb-md-0 mb-2 mb-md-0">
                 <img
@@ -1956,7 +1978,7 @@
               <div class="col-md-6 pb-4 pb-md-0 mb-2 mb-md-0">
                 <img
                   class="rounded-5"
-                  src="./assets/img/landing/web-studio/services/07.jpg"
+                  src="https://www.shutterstock.com/image-photo/artificial-intelligence-content-generator-man-600nw-2471042165.jpg"
                   alt="AI & ML"
                 />
               </div>
