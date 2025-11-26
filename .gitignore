@@ -14,6 +14,7 @@ lerna-debug.log*
 
 .env
 ./.env
+.htaccess
 *.zip
 # Editor directories and files
 .vscode/*
