@@ -181,6 +181,12 @@
                 "position": 14,
                 "name": "Contact",
                 "item": "https://www.techvivanta.com/contact.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 15,
+                "name": "404",
+                "item": "https://www.techvivanta.com/404.html"
               }
             ]
           }
@@ -409,12 +415,11 @@
                 <a class="nav-link" href="./index.html">Home</a>
               </li>
               <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
+                <p
+                  class="nav-link dropdown-toggle user-select-none"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                  >Technologies</a
+                  >Technologies</p
                 >
                 <div
                   class="dropdown-menu overflow-hidden p-0"
@@ -428,7 +433,7 @@
                             >Web Development</a
                           >
                           <img
-                            class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0"
+                            class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 d-none d-lg-block opacity-0"
                             src="assets/img/megamenu/04.jpg"
                             alt="landing"
                           />
@@ -440,7 +445,7 @@
                             >Application Development</a
                           >
                           <img
-                            class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0"
+                            class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 d-none d-lg-block opacity-0"
                             src="assets/img/megamenu/05.jpg"
                             alt="landing"
                           />
@@ -452,7 +457,7 @@
                             >Backend Development</a
                           >
                           <img
-                            class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0"
+                            class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 d-none d-lg-block opacity-0"
                             src="assets/img/megamenu/06.jpg"
                             alt="landing"
                           />
@@ -464,7 +469,7 @@
                             >Crypto Platform Development</a
                           >
                           <img
-                            class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0"
+                            class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 d-none d-lg-block opacity-0"
                             src="assets/img/megamenu/07.jpg"
                             alt="landing"
                           />
@@ -480,7 +485,7 @@
                             >AI-LLM Development</a
                           >
                           <img
-                            class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0"
+                            class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 d-none d-lg-block opacity-0"
                             src="assets/img/megamenu/08.jpg"
                             alt="landing"
                           />
@@ -488,7 +493,7 @@
                         <li>
                           <a class="dropdown-item" href="./ui-ux.html">UI/UX</a>
                           <img
-                            class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0"
+                            class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 d-none d-lg-block opacity-0"
                             src="assets/img/megamenu/09.jpg"
                             alt="landing"
                           />
@@ -500,7 +505,7 @@
                             >Project Management</a
                           >
                           <img
-                            class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0"
+                            class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 d-none d-lg-block opacity-0"
                             src="assets/img/megamenu/10.jpg"
                             alt="landing"
                           />
@@ -511,7 +516,7 @@
                             >SEO Services</a
                           >
                           <img
-                            class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0"
+                            class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 d-none d-lg-block opacity-0"
                             src="assets/img/megamenu/11.jpg"
                             alt="landing"
                           />
@@ -1103,15 +1108,11 @@
             class="swiper-pagination position-relative bottom-0 mt-2 pt-4 d-lg-none"
           ></div>
         </div>
-
-        
       </section>
 
       <!-- Clients (Logos autoplay slider) -->
-      <section
-        class="container  pt-2 pt-sm-3 pt-md-4 pt-lg-5 my-xl-3 my-xxl-5"
-      >
-        <div class="container pb-4 mb-2 mb-lg-3 ">
+      <section class="container pt-2 pt-sm-3 pt-md-4 pt-lg-5 my-xl-3 my-xxl-5">
+        <div class="container pb-4 mb-2 mb-lg-3">
           <h2 class="h1 text-center">Our clients</h2>
           <p class="text-center mb-5">
             More than 30+ clients using Around to analyze data
@@ -1148,7 +1149,6 @@
           >
             <div class="swiper-slide">
               <div
-
                 class="bg-gray rounded-4 d-flex justify-content-center align-items-center"
                 style="width: 196px; height: 100px"
               >
@@ -1513,7 +1513,6 @@
         </div>
       </section>
 
-     
       <!-- CTA -->
       <section class="bg-primary py-5" data-bs-theme="dark">
         <div class="container pt-lg-2 pt-xl-4 pt-xxl-5 pb-1 pb-sm-3">
@@ -1534,11 +1533,9 @@
                 <a href="./contact.html" class="btn btn-outline-light"
                   >Start Your Project</a
                 >
-               
               </div>
 
               <!-- Quick Stats -->
-             
             </div>
           </div>
           <div class="d-none d-md-block text-center mt-n5">
@@ -1560,7 +1557,7 @@
     </main>
 
     <!-- Footer -->
-  <footer class="footer bg-secondary pt-4 pb-2 pb-md-5 pt-sm-5">
+    <footer class="footer bg-secondary pt-4 pb-2 pb-md-5 pt-sm-5">
       <div class="container-fluid pb-1 pb-md-0 px-md-5">
         <div
           class="bg-dark rounded-5 position-relative overflow-hidden w-100 py-5 px-3 px-sm-4 px-xl-5 mx-auto"
