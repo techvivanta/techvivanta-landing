@@ -396,12 +396,11 @@
                 <a class="nav-link active" href="./index.html">Home</a>
               </li>
               <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
+                <p
+                  class="nav-link dropdown-toggle user-select-none"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                  >Technologies</a
+                  >Technologies</p
                 >
                 <div
                   class="dropdown-menu overflow-hidden p-0"
@@ -653,13 +652,21 @@
               class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"
             ></span>
 
-            <div class="jarallax-img">
-              <img
-                src="./assets/img/landing/insurance/hero/New_hero.webp"
-                class="img-fluid"
-                decoding="async"
-                alt="Team working on software and IT solutions in a modern office"
-              />
+            <div
+              class="jarallax-img"
+              style="
+                background-image: url('./assets/img/landing/insurance/hero/New_hero.webp');
+                background-size: cover;
+              "
+            >
+              <!--
+  <img
+    src="./assets/img/landing/insurance/hero/New_hero.webp"
+    class="img-fluid"
+    decoding="async"
+    alt="Team working on software and IT solutions in a modern office"
+  />
+  -->
             </div>
           </div>
 
@@ -1050,7 +1057,10 @@
       </div>
 
       <!-- Industries (Binded accordion) -->
-      <section class="container py-5 mt-2 mt-sm-3 mt-md-4" aria-label="Industries we work in">
+      <section
+        class="container py-5 mt-2 mt-sm-3 mt-md-4"
+        aria-label="Industries we work in"
+      >
         <h2 class="h1 text-center pt-lg-3">Industries we work in</h2>
         <p class="pb-3 pb-md-4 mb-0 mb-sm-2 mb-lg-3 text-center">
           Most of our projcts come from the industries below
@@ -1705,7 +1715,7 @@
           <li class="nav-item mb-0" role="presentation">
             <a
               class="nav-link px-3"
-              href="#web-development"
+              href="./web-development.html"
               data-bs-toggle="tab"
               role="tab"
               aria-selected="false"
