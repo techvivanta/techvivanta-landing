@@ -21,7 +21,7 @@
 function initContactForm() {
   // Configuration
   const CONFIG = {
-    baseUrl: 'http://localhost:8576', // Replace with your backend URL
+    baseUrl: 'https://kiroapi.techvivanta.com', // ⚠️ UPDATE THIS
     encryptionKey: 'a65cdf44d994399f95f8c51837c1bf87e4bc33d080848892c495833447e27028',
     clientEmail: 'techvivanta.app@gmail.com'
   };
@@ -77,7 +77,7 @@ function initContactForm() {
     alertDiv.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
     alertDiv.style.cssText = 'top: 20px; right: 20px; z-index: 10000; min-width: 300px;';
     alertDiv.innerHTML = `
-      <i class="bi bi-${type === 'success' ? 'check-circle' : 'exclamation-triangle'} me-2"></i>
+      <i class="ai-${type === 'success' ? 'check-circle' : 'exclamation-triangle'} me-2"></i>
       ${message}
       <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
     `;
@@ -88,36 +88,66 @@ function initContactForm() {
     }, 5000);
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
+  // Wait for DOM to be ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initForm);
+  } else {
+    initForm();
+  }
+
+  function initForm() {
+    console.log('Initializing form...');
+    
     /* -------------------------
        Step & Progress Handling
     ------------------------- */
     const steps = document.querySelectorAll(".step");
     const stepContents = document.querySelectorAll(".step-content");
-    const nextBtn = document.querySelector(".controls .btn-outline-primary:nth-of-type(2)");
-    const prevBtn = document.querySelector(".controls .btn-outline-primary:nth-of-type(1)");
+    const controls = document.querySelector(".controls");
+    
+    if (!controls) {
+      console.error('Controls not found!');
+      return;
+    }
+    
+    const buttons = controls.querySelectorAll("button");
+    const prevBtn = buttons[0];
+    const nextBtn = buttons[1];
+
+    if (!prevBtn || !nextBtn) {
+      console.error('Navigation buttons not found!');
+      return;
+    }
+
+    console.log('Found', steps.length, 'steps');
+    console.log('Found', stepContents.length, 'step contents');
 
     let currentStep = 1;
 
     const updateSteps = () => {
+      console.log('Updating to step', currentStep);
+      
       steps.forEach((el, index) => {
         el.classList.toggle("active", index + 1 === currentStep);
       });
+      
       stepContents.forEach((content, index) => {
         content.style.display = index + 1 === currentStep ? "block" : "none";
       });
 
       prevBtn.style.display = currentStep === 1 ? "none" : "inline-block";
       nextBtn.textContent = currentStep === steps.length ? "Submit" : "Next";
+      
+      checkStepValidity();
     };
-
-    updateSteps();
 
     /* -------------------------
        Step 1: Service Selection
     ------------------------- */
     const serviceCards = document.querySelectorAll("#serviceSection .custom-select-1");
     let selectedServices = [];
+
+    console.log('Found', serviceCards.length, 'service cards');
 
     serviceCards.forEach((card) => {
       card.addEventListener("click", () => {
@@ -132,6 +162,7 @@ function initContactForm() {
         } else {
           selectedServices = selectedServices.filter((s) => s !== serviceName);
         }
+        console.log('Selected services:', selectedServices);
         checkStepValidity();
       });
     });
@@ -141,6 +172,8 @@ function initContactForm() {
     ------------------------- */
     const stageCards = document.querySelectorAll("#serviceSection2 .custom-select-2");
     let selectedStage = "";
+
+    console.log('Found', stageCards.length, 'stage cards');
 
     stageCards.forEach((card) => {
       card.addEventListener("click", () => {
@@ -153,6 +186,7 @@ function initContactForm() {
         radio.checked = true;
         card.classList.add("selected");
         selectedStage = name;
+        console.log('Selected stage:', selectedStage);
         checkStepValidity();
       });
     });
@@ -164,27 +198,29 @@ function initContactForm() {
     const dropZone = document.getElementById("dropZone");
     const fileInput = document.getElementById("fileInput");
     const fileList = document.getElementById("fileList");
-    let uploadedFile = null; // Only one file allowed
+    let uploadedFile = null;
 
-    dropZone.addEventListener("click", () => fileInput.click());
-    dropZone.addEventListener("dragover", (e) => {
-      e.preventDefault();
-      dropZone.classList.add("dragover");
-    });
-    dropZone.addEventListener("dragleave", () =>
-      dropZone.classList.remove("dragover")
-    );
-    dropZone.addEventListener("drop", (e) => {
-      e.preventDefault();
-      dropZone.classList.remove("dragover");
-      handleFiles(e.dataTransfer.files);
-    });
-    fileInput.addEventListener("change", (e) => handleFiles(e.target.files));
+    if (dropZone && fileInput) {
+      dropZone.addEventListener("click", () => fileInput.click());
+      dropZone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        dropZone.classList.add("dragover");
+      });
+      dropZone.addEventListener("dragleave", () =>
+        dropZone.classList.remove("dragover")
+      );
+      dropZone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        dropZone.classList.remove("dragover");
+        handleFiles(e.dataTransfer.files);
+      });
+      fileInput.addEventListener("change", (e) => handleFiles(e.target.files));
+    }
 
     const handleFiles = (files) => {
       if (files.length === 0) return;
       
-      const file = files[0]; // Take only first file
+      const file = files[0];
       
       if (file.size > 10 * 1024 * 1024) {
         showAlert('danger', `${file.name} exceeds 10MB limit.`);
@@ -192,22 +228,24 @@ function initContactForm() {
       }
       
       uploadedFile = file;
-      fileList.innerHTML = `
-        <li class="d-flex align-items-center justify-content-between p-2 border rounded">
-          <span><i class="bi bi-file-earmark me-2"></i>${file.name} (${(file.size / 1024 / 1024).toFixed(2)} MB)</span>
-          <button type="button" class="btn btn-sm btn-outline-danger" onclick="window.removeFile()">
-            <i class="ai-trash"></i>
-          </button>
-        </li>
-      `;
+      if (fileList) {
+        fileList.innerHTML = `
+          <li class="d-flex align-items-center justify-content-between p-2 border rounded">
+            <span><i class="ai-file-earmark me-2"></i>${file.name} (${(file.size / 1024 / 1024).toFixed(2)} MB)</span>
+            <button type="button" class="btn btn-sm btn-outline-danger" onclick="window.removeFile()">
+              <i class="ai-trash"></i>
+            </button>
+          </li>
+        `;
+      }
       checkStepValidity();
     };
 
-    // Make removeFile global
     window.removeFile = () => {
       uploadedFile = null;
-      fileList.innerHTML = '';
-      fileInput.value = '';
+      if (fileList) fileList.innerHTML = '';
+      if (fileInput) fileInput.value = '';
+      checkStepValidity();
     };
 
     /* -------------------------
@@ -248,27 +286,27 @@ function initContactForm() {
 
       [nameInput, company, email, phone, country, budget].forEach(resetError);
 
-      if (!nameInput.value.trim() || !/^[a-zA-Z\s]{2,50}$/.test(nameInput.value.trim())) {
+      if (!nameInput || !nameInput.value.trim() || !/^[a-zA-Z\s]{2,50}$/.test(nameInput.value.trim())) {
         showError(nameInput, "Name must be 2-50 characters and contain only letters");
       }
 
-      if (!company.value.trim() || company.value.trim().length < 2 || company.value.trim().length > 100) {
+      if (!company || !company.value.trim() || company.value.trim().length < 2 || company.value.trim().length > 100) {
         showError(company, "Company name must be 2-100 characters");
       }
 
-      if (!email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+      if (!email || !email.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
         showError(email, "Please enter a valid email address");
       }
 
-      if (!phone.value.trim() || !/^[0-9]{7,15}$/.test(phone.value.trim())) {
+      if (!phone || !phone.value.trim() || !/^[0-9]{7,15}$/.test(phone.value.trim())) {
         showError(phone, "Phone number must be 7-15 digits");
       }
 
-      if (!country.value.trim() || country.value.trim().length < 2) {
+      if (!country || !country.value.trim() || country.value.trim().length < 2) {
         showError(country, "Please enter your country");
       }
 
-      if (!budget.value.trim() || !/^[0-9]+(\.[0-9]{1,2})?$/.test(budget.value.trim())) {
+      if (!budget || !budget.value.trim() || !/^[0-9]+(\.[0-9]{1,2})?$/.test(budget.value.trim())) {
         showError(budget, "Please enter a valid budget amount");
       }
       return valid;
@@ -287,13 +325,14 @@ function initContactForm() {
           valid = !!selectedStage;
           break;
         case 3:
-          valid = textarea.value.trim().length >= 10;
+          valid = textarea && textarea.value.trim().length >= 10;
           break;
         case 4:
           valid = validateForm();
           break;
       }
       nextBtn.disabled = !valid;
+      console.log('Step', currentStep, 'valid:', valid);
     };
 
     if (textarea) textarea.addEventListener("input", checkStepValidity);
@@ -321,17 +360,14 @@ function initContactForm() {
           showLoading();
           
           try {
-            // Encrypt emails
             const encryptedEmail = encryptEmail(email.value.trim());
             const encryptedClientEmail = encryptEmail(CONFIG.clientEmail);
 
-            // Convert file to base64 if exists
             let documentUrl = null;
             if (uploadedFile) {
               documentUrl = await fileToBase64(uploadedFile);
             }
 
-            // Prepare extra fields
             const extra_fields = [
               { key: "Services", value: selectedServices.join(", ") },
               { key: "Project Stage", value: selectedStage },
@@ -340,11 +376,10 @@ function initContactForm() {
               { key: "Budget", value: budget.value.trim() }
             ];
 
-            // Prepare API payload
             const payload = {
               name: nameInput.value.trim(),
               email: encryptedEmail,
-              mobileno: phone.value.trim() || null,
+              phone: phone.value.trim() || null,
               subject: `Project Enquiry from ${nameInput.value.trim()}`,
               message: textarea.value.trim(),
               country: country.value.trim(),
@@ -353,7 +388,8 @@ function initContactForm() {
               extra_fields: extra_fields
             };
 
-            // Make API call
+            console.log('Sending payload:', payload);
+
             const response = await fetch(`${CONFIG.baseUrl}/mail/contact-us`, {
               method: 'POST',
               headers: {
@@ -368,7 +404,6 @@ function initContactForm() {
             if (response.ok && result.status) {
               showAlert('success', 'Your enquiry has been sent successfully! We\'ll get back to you soon.');
 
-              // Reset form
               if (form) form.reset();
               selectedServices = [];
               selectedStage = "";
@@ -391,7 +426,6 @@ function initContactForm() {
               
               currentStep = 1;
               updateSteps();
-              checkStepValidity();
             } else {
               showAlert('danger', result.message || 'Failed to send enquiry. Please try again.');
             }
@@ -404,7 +438,6 @@ function initContactForm() {
       } else if (!nextBtn.disabled) {
         currentStep++;
         updateSteps();
-        checkStepValidity();
       }
     });
 
@@ -414,10 +447,10 @@ function initContactForm() {
       if (currentStep > 1) {
         currentStep--;
         updateSteps();
-        checkStepValidity();
       }
     });
 
-    checkStepValidity();
-  });
+    updateSteps();
+    console.log('Form initialized successfully');
+  }
 }
