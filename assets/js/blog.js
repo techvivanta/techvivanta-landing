@@ -22,14 +22,17 @@
   }
 
   function fetchBlogs() {
-    return fetch('./blogs.json?t=' + Date.now())
+    return fetch('https://api.github.com/repos/' + getRepoPath() + '/contents/blogs.json?ref=main&t=' + Date.now())
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-      .then(function (data) { blogs = (data.blogs || []).filter(function (b) { return b.published; }); })
-      .catch(function () {
-        return fetch('https://raw.githubusercontent.com/' + getRepoPath() + '/main/blogs.json?t=' + Date.now())
-          .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-          .then(function (data) { blogs = (data.blogs || []).filter(function (b) { return b.published; }); });
+      .then(function (data) {
+        var json = decodeUTF8(data.content);
+        blogs = (JSON.parse(json).blogs || []).filter(function (b) { return b.published; });
       });
+  }
+
+  function decodeUTF8(str) {
+    try { return decodeURIComponent(atob(str).split('').map(function(c) { return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2); }).join('')); }
+    catch (e) { return atob(str); }
   }
 
   function getRepoPath() {
