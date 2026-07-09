@@ -16,67 +16,73 @@
   </url>
 
   <url>
-    <loc>https://www.techvivanta.com/portfoilo.html</loc>
+    <loc>https://www.techvivanta.com/portfolio.html</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://www.techvivanta.com/web-development.html</loc>
+    <loc>https://www.techvivanta.com/services/web-development.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://www.techvivanta.com/mobile-app-development.html</loc>
+    <loc>https://www.techvivanta.com/services/mobile-app-development.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://www.techvivanta.com/backend-development.html</loc>
+    <loc>https://www.techvivanta.com/services/backend-development.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://www.techvivanta.com/ui-ux.html</loc>
+    <loc>https://www.techvivanta.com/services/ui-ux.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://www.techvivanta.com/ai-llm-development.html</loc>
+    <loc>https://www.techvivanta.com/services/ai-llm-development.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://www.techvivanta.com/crypto-platform-development.html</loc>
+    <loc>https://www.techvivanta.com/services/crypto-platform-development.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://www.techvivanta.com/project-management.html</loc>
+    <loc>https://www.techvivanta.com/services/project-management.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://www.techvivanta.com/seo-services.html</loc>
+    <loc>https://www.techvivanta.com/services/seo-services.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <url>
-    <loc>https://www.techvivanta.com/privacy-policy.html</loc>
+    <loc>https://www.techvivanta.com/blog.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://www.techvivanta.com/legal/privacy-policy.html</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
 
   <url>
-    <loc>https://www.techvivanta.com/terms.html</loc>
+    <loc>https://www.techvivanta.com/legal/terms.html</loc>
     <priority>0.6</priority>
     <changefreq>yearly</changefreq>
   </url>
@@ -84,6 +90,58 @@
   <url>
     <loc>https://www.techvivanta.com/contact.html</loc>
     <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://www.techvivanta.com/blog/backend-development-trends-2025.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.techvivanta.com/blog/cybersecurity-best-practices-2025.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.techvivanta.com/blog/cloud-migration-strategy-2025.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.techvivanta.com/blog/digital-transformation-strategy.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.techvivanta.com/blog/web-development-trends-2025.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.techvivanta.com/blog/how-llms-are-transforming-business.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.techvivanta.com/blog/mobile-app-development-cost-2025.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.techvivanta.com/blog/ui-ux-design-trends-2025.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.techvivanta.com/blog/blockchain-beyond-crypto-enterprise.html</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://www.techvivanta.com/blog/how-to-choose-software-development-partner.html</loc>
+    <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 </urlset>

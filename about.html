@@ -10,7 +10,7 @@
     />
 
     <!-- SEO meta tags -->
-    <title>About Us | TechVivanta – Crafting Future-Ready Solutions</title>
+    <title>About Us | TechVivanta – Software Development Company in Surat, India</title>
 
     <meta
       name="description"
@@ -23,6 +23,15 @@
     />
 
     <meta name="author" content="TechVivanta" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
 
     <!-- Webmanifest + Favicon / App icons -->
     <link rel="manifest" href="./manifest.json" />
@@ -68,6 +77,41 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://techvivanta.com/about.html" />
 
+    <!-- JSON-LD Schema for Local Business -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "TechVivanta",
+        "image": "https://www.techvivanta.com/assets/app-icons/logo.png",
+        "url": "https://www.techvivanta.com",
+        "telephone": "+917990269840",
+        "email": "techvivanta.app@gmail.com",
+        "description": "TechVivanta is a software development company offering web, mobile, AI/LLM, UI/UX, and digital solutions globally.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "337, Exult Shoppers, Vesu",
+          "addressLocality": "Surat",
+          "addressRegion": "Gujarat",
+          "postalCode": "395007",
+          "addressCountry": "IN"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "10:00",
+            "closes": "19:00"
+          }
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/company/tech-vivanta",
+          "https://github.com/techvivanta",
+          "https://www.instagram.com/techvivanta/"
+        ]
+      }
+    </script>
+
     <!-- JSON-LD Schema for Organization -->
     <script type="application/ld+json">
       {
@@ -109,78 +153,6 @@
                 "position": 2,
                 "name": "About",
                 "item": "https://www.techvivanta.com/about.html"
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Portfolio",
-                "item": "https://www.techvivanta.com/portfolio.html"
-              },
-              {
-                "@type": "ListItem",
-                "position": 4,
-                "name": "Web Development",
-                "item": "https://www.techvivanta.com/web-development.html"
-              },
-              {
-                "@type": "ListItem",
-                "position": 5,
-                "name": "Mobile App Development",
-                "item": "https://www.techvivanta.com/mobile-app-development.html"
-              },
-              {
-                "@type": "ListItem",
-                "position": 6,
-                "name": "Backend Development",
-                "item": "https://www.techvivanta.com/backend-development.html"
-              },
-              {
-                "@type": "ListItem",
-                "position": 7,
-                "name": "UI/UX Design",
-                "item": "https://www.techvivanta.com/ui-ux.html"
-              },
-              {
-                "@type": "ListItem",
-                "position": 8,
-                "name": "AI & LLM Development",
-                "item": "https://www.techvivanta.com/ai-llm-development.html"
-              },
-              {
-                "@type": "ListItem",
-                "position": 9,
-                "name": "Crypto Platform Development",
-                "item": "https://www.techvivanta.com/crypto-platform-development.html"
-              },
-              {
-                "@type": "ListItem",
-                "position": 10,
-                "name": "Project Management",
-                "item": "https://www.techvivanta.com/project-management.html"
-              },
-              {
-                "@type": "ListItem",
-                "position": 11,
-                "name": "SEO Services",
-                "item": "https://www.techvivanta.com/seo-services.html"
-              },
-              {
-                "@type": "ListItem",
-                "position": 12,
-                "name": "Privacy Policy",
-                "item": "https://www.techvivanta.com/privacy-policy.html"
-              },
-              {
-                "@type": "ListItem",
-                "position": 13,
-                "name": "Terms & Conditions",
-                "item": "https://www.techvivanta.com/terms.html"
-              },
-              {
-                "@type": "ListItem",
-                "position": 14,
-                "name": "Contact",
-                "item": "https://www.techvivanta.com/contact.html"
               }
             ]
           }
@@ -210,6 +182,12 @@
       rel="stylesheet"
       media="screen"
       href="assets/vendor/aos/dist/aos.css"
+    />
+
+    <!-- bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
     />
 
     <!-- Font icons -->
@@ -385,7 +363,7 @@
             href="./contact.html"
             id="contactButton"
           >
-            Buy now
+            Book a Call
           </a>
 
           <!-- Mobile menu toggler (Hamburger) -->
@@ -414,7 +392,7 @@
                   href="#"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                  >Technologies</a
+                  >Services</a
                 >
                 <div
                   class="dropdown-menu overflow-hidden p-0"
@@ -424,7 +402,7 @@
                     <div class="mega-dropdown-column pt-1 pt-lg-3 pb-lg-4">
                       <ul class="list-unstyled mb-0">
                         <li>
-                          <a class="dropdown-item" href="./web-development.html"
+                          <a class="dropdown-item" href="./services/web-development.html"
                             >Web Development</a
                           >
                           <img
@@ -436,8 +414,8 @@
                         <li>
                           <a
                             class="dropdown-item"
-                            href="./mobile-app-development.html"
-                            >Application Development</a
+                            href="./services/mobile-app-development.html"
+                            >Mobile App Development</a
                           >
                           <img
                             class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0"
@@ -448,7 +426,7 @@
                         <li>
                           <a
                             class="dropdown-item"
-                            href="./backend-development.html"
+                            href="./services/backend-development.html"
                             >Backend Development</a
                           >
                           <img
@@ -460,7 +438,7 @@
                         <li>
                           <a
                             class="dropdown-item"
-                            href="./crypto-platform-development.html"
+                            href="./services/crypto-platform-development.html"
                             >Crypto Platform Development</a
                           >
                           <img
@@ -476,7 +454,7 @@
                         <li>
                           <a
                             class="dropdown-item"
-                            href="./ai-llm-development.html"
+                            href="./services/ai-llm-development.html"
                             >AI-LLM Development</a
                           >
                           <img
@@ -486,7 +464,7 @@
                           />
                         </li>
                         <li>
-                          <a class="dropdown-item" href="./ui-ux.html">UI/UX</a>
+                          <a class="dropdown-item" href="./services/ui-ux.html">UI/UX</a>
                           <img
                             class="mega-dropdown-column position-absolute top-0 end-0 h-100 bg-size-cover bg-repeat-0 z-2 opacity-0"
                             src="assets/img/megamenu/09.jpg"
@@ -496,7 +474,7 @@
                         <li>
                           <a
                             class="dropdown-item"
-                            href="./project-management.html"
+                            href="./services/project-management.html"
                             >Project Management</a
                           >
                           <img
@@ -507,7 +485,7 @@
                         </li>
 
                         <li>
-                          <a class="dropdown-item" href="./seo-services.html"
+                          <a class="dropdown-item" href="./services/seo-services.html"
                             >SEO Services</a
                           >
                           <img
@@ -533,7 +511,7 @@
                 <a class="nav-link" href="./portfolio.html">Portfolio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./contact.html">Hire Developer</a>
+                <a class="nav-link" href="./blog.html">Blog</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./contact.html">Contact</a>
@@ -545,7 +523,7 @@
                 href="./contact.html"
                 id="contactButton"
               >
-                Buy now
+                Book a Call
               </a>
             </div>
           </nav>
@@ -553,44 +531,32 @@
       </header>
 
       <!-- Hero -->
-      <section class="overflow-hidden">
-        <div class="container pt-2 pt-sm-4 pb-sm-2 pb-md-4 py-xl-5 mt-5">
-          <div
-            class="row align-items-center py-5 mt-md-2 my-lg-3 my-xl-4 my-xxl-5"
-          >
-            <div
-              class="col-lg-6 order-lg-2 d-flex justify-content-center justify-content-lg-end mb-4 mb-md-5 mb-lg-0 pb-3 pb-md-0"
-            >
-              <div class="parallax me-lg-n4 me-xl-n5" style="max-width: 667px">
-                <video class="parallax-video" autoplay muted loop playsinline>
-                  <source
-                    src="./assets/img/landing/mobile-app-showcase/herovideo01.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-            </div>
-            <div class="col-lg-6 order-lg-1">
-              <h1 class="display-3 text-center text-lg-start pb-sm-2 pb-md-3">
-                Innovative Digital Solutions for Your Business
+      <section class="position-relative overflow-hidden bg-dark" data-bs-theme="dark">
+        <div class="position-absolute top-0 start-0 w-100 h-100 opacity-25">
+          <video class="w-100 h-100 object-fit-cover" autoplay muted loop playsinline style="object-fit: cover;">
+            <source src="./assets/img/landing/mobile-app-showcase/herovideo01.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="container position-relative z-2 py-5 my-5">
+          <div class="row align-items-center py-lg-5 my-lg-5">
+            <div class="col-lg-7">
+              <h1 class="display-3 fw-bold pb-2">
+                We Build Digital Products<br class="d-none d-lg-block" />
+                That Drive Business Growth
               </h1>
-              <p
-                class="fs-lg text-center text-lg-start pb-xl-2 mx-auto mx-lg-0 mb-5"
-                style="max-width: 420px"
-              >
-                Tech Vivanta specializes in creating cutting-edge mobile
-                applications and web solutions that drive growth and transform
-                user experiences.
+              <p class="fs-lg text-white opacity-75 mb-4 pb-2" style="max-width: 540px">
+                Tech Vivanta is a software development company in Surat, India.
+                We design and build mobile apps, web platforms, AI solutions, and
+                digital products for startups and enterprises worldwide.
               </p>
-              <div class="mx-auto mx-lg-0" style="max-width: 420px">
-                <button class="btn btn-primary">
-                  <a
-                    href="./contact.html"
-                    class="text-white text-decoration-none d-block w-100 h-100"
-                  >
-                    Book a call
-                  </a>
-                </button>
+              <div class="d-flex gap-3">
+                <a href="./contact.html" class="btn btn-primary btn-lg rounded-pill px-4">
+                  Book a Call
+                  <i class="ai-arrow-right ms-2"></i>
+                </a>
+                <a href="./portfolio.html" class="btn btn-outline-light btn-lg rounded-pill px-4">
+                  View Our Work
+                </a>
               </div>
             </div>
           </div>
@@ -598,287 +564,219 @@
       </section>
 
       <!-- Stats -->
-      <section class="container pb-2 pb-sm-3 pb-md-4 pb-lg-5 mb-xl-3 mb-xxl-5">
-        <div class="text-center mb-4 mb-md-5">
-          <h2 class="h1 display-4 mb-3">Our Achievements</h2>
-          <p class="fs-lg text-muted mx-auto" style="max-width: 600px">
-            With years of expertise and a proven track record, we deliver
-            exceptional digital solutions that drive business growth and
-            success.
-          </p>
+      <section class="container py-5" id="statsSection">
+        <div class="row g-3">
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="bg-light rounded-4 text-center p-3 h-100 d-flex flex-column justify-content-center">
+              <div class="h2 display-5 fw-bold text-primary mb-0 counter" data-target="50">0</div>
+              <span class="fs-sm text-muted">Custom Solutions</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="bg-light rounded-4 text-center p-3 h-100 d-flex flex-column justify-content-center">
+              <div class="h2 display-5 fw-bold text-primary mb-0 counter" data-target="8">0</div>
+              <span class="fs-sm text-muted">Years of Experience</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="bg-light rounded-4 text-center p-3 h-100 d-flex flex-column justify-content-center">
+              <div class="h2 display-5 fw-bold text-primary mb-0 counter" data-target="25">0</div>
+              <span class="fs-sm text-muted">Happy Clients</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="bg-light rounded-4 text-center p-3 h-100 d-flex flex-column justify-content-center">
+              <div class="h2 display-5 fw-bold text-primary mb-0 counter" data-target="20">0</div>
+              <span class="fs-sm text-muted">Experts</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="bg-light rounded-4 text-center p-3 h-100 d-flex flex-column justify-content-center">
+              <div class="h2 display-5 fw-bold text-primary mb-0 counter" data-target="30">0</div>
+              <span class="fs-sm text-muted">Cost Reduction</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="bg-light rounded-4 text-center p-3 h-100 d-flex flex-column justify-content-center">
+              <div class="h2 display-5 fw-bold text-primary mb-0 counter" data-target="99.8">0</div>
+              <span class="fs-sm text-muted">Client Success Rate</span>
+            </div>
+          </div>
         </div>
-        <div class="bg-light rounded-5 py-4 py-md-5 px-lg-5">
-          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-0">
-            <div
-              class="col d-md-flex justify-content-center text-center text-md-start position-relative"
-            >
-              <div
-                class="position-absolute top-50 end-0 translate-middle-y border-end"
-                style="height: 60px"
-              ></div>
-              <div class="p-3 px-sm-0 py-sm-4">
-                <div
-                  class="h2 display-5 text-primary mb-0 counter text-center"
-                  data-target="50"
-                >
-                  0
-                </div>
-                <span>Custom Solutions</span>
-              </div>
+      </section>
+
+      <!-- Story + Values -->
+      <section class="container py-5">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5">
+            <h2 class="h1 mb-3">Who We Are</h2>
+            <p class="fs-lg text-muted mb-4">
+              Founded in Surat, India, Tech Vivanta is a team of 20+ engineers,
+              designers, and product thinkers who build digital products that
+              make a real impact.
+            </p>
+            <p class="text-muted mb-4">
+              From startups to enterprises, we've delivered 50+ custom solutions
+              across mobile apps, web platforms, AI/LLM, and blockchain — with a
+              99.8% client success rate that speaks for itself.
+            </p>
+            <div class="d-flex gap-2 mb-4">
+              <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2">8+ Years</span>
+              <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2">50+ Projects</span>
+              <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2">30% Cost Reduction</span>
             </div>
-            <div
-              class="col d-md-flex justify-content-center text-center text-md-start position-relative"
-            >
-              <div
-                class="position-absolute top-50 end-0 translate-middle-y border-end d-none d-md-block"
-                style="height: 60px"
-              ></div>
-              <div class="p-3 px-sm-0 py-sm-4">
-                <div
-                  class="h2 display-5 text-primary mb-0 counter text-center"
-                  data-target="08"
-                >
-                  0
+            <a href="./contact.html" class="btn btn-primary rounded-pill">
+              Let's Work Together
+              <i class="ai-arrow-right ms-2"></i>
+            </a>
+          </div>
+          <div class="col-lg-6 offset-lg-1">
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="card border-0 bg-light h-100">
+                  <div class="card-body text-center p-4">
+                    <div class="fs-2 text-primary mb-2"><i class="bi bi-award"></i></div>
+                    <h6 class="fw-semibold mb-1">Quality</h6>
+                    <p class="fs-sm text-muted mb-0">Bug-free code and designs that exceed expectations.</p>
+                  </div>
                 </div>
-                <span>Years of Experience</span>
               </div>
-            </div>
-            <div
-              class="col d-md-flex justify-content-center text-center text-md-start position-relative"
-            >
-              <div
-                class="position-absolute top-50 end-0 translate-middle-y border-end"
-                style="height: 60px"
-              ></div>
-              <div class="p-3 px-sm-0 py-sm-4">
-                <div
-                  class="h2 display-5 text-primary mb-0 counter text-center"
-                  data-target="25"
-                >
-                  0
+              <div class="col-sm-6">
+                <div class="card border-0 bg-light h-100">
+                  <div class="card-body text-center p-4">
+                    <div class="fs-2 text-primary mb-2"><i class="bi bi-eye"></i></div>
+                    <h6 class="fw-semibold mb-1">Transparency</h6>
+                    <p class="fs-sm text-muted mb-0">Honest timelines and open collaboration.</p>
+                  </div>
                 </div>
-                <span>Happy Clients</span>
               </div>
-            </div>
-            <div
-              class="col d-md-flex justify-content-center text-center text-md-start position-relative"
-            >
-              <div
-                class="position-absolute top-50 end-0 translate-middle-y border-end d-none d-md-block"
-                style="height: 60px"
-              ></div>
-              <div class="p-3 px-sm-0 py-sm-4">
-                <div
-                  class="h2 display-5 text-primary mb-0 counter text-center"
-                  data-target="20"
-                >
-                  0
+              <div class="col-sm-6">
+                <div class="card border-0 bg-light h-100">
+                  <div class="card-body text-center p-4">
+                    <div class="fs-2 text-primary mb-2"><i class="bi bi-graph-up-arrow"></i></div>
+                    <h6 class="fw-semibold mb-1">Long-term Thinking</h6>
+                    <p class="fs-sm text-muted mb-0">Scalable solutions built to last and grow with you.</p>
+                  </div>
                 </div>
-                <span>Experts</span>
               </div>
-            </div>
-            <div
-              class="col d-md-flex justify-content-center text-center text-md-start position-relative"
-            >
-              <div
-                class="position-absolute top-50 end-0 translate-middle-y border-end"
-                style="height: 60px"
-              ></div>
-              <div class="p-3 px-sm-0 py-sm-4">
-                <div
-                  class="h2 display-5 text-primary mb-0 counter text-center"
-                  data-target="30"
-                >
-                  0
+              <div class="col-sm-6">
+                <div class="card border-0 bg-light h-100">
+                  <div class="card-body text-center p-4">
+                    <div class="fs-2 text-primary mb-2"><i class="bi bi-lightbulb"></i></div>
+                    <h6 class="fw-semibold mb-1">Innovation</h6>
+                    <p class="fs-sm text-muted mb-0">Cutting-edge tech for a competitive advantage.</p>
+                  </div>
                 </div>
-                <span>Cost Effective</span>
               </div>
-            </div>
-            <div
-              class="col d-md-flex justify-content-center text-center text-md-start position-relative"
-            >
-              <div class="p-3 px-sm-0 py-sm-4">
-                <div
-                  class="h2 display-5 text-primary mb-0 counter"
-                  data-target="99.8"
-                >
-                  0
+              <div class="col-sm-6">
+                <div class="card border-0 bg-light h-100">
+                  <div class="card-body text-center p-4">
+                    <div class="fs-2 text-primary mb-2"><i class="bi bi-shield-check"></i></div>
+                    <h6 class="fw-semibold mb-1">Responsibility</h6>
+                    <p class="fs-sm text-muted mb-0">We own our work and deliver on promises.</p>
+                  </div>
                 </div>
-                <span>Client Success Ratio</span>
+              </div>
+              <div class="col-sm-6">
+                <div class="card border-0 bg-light h-100">
+                  <div class="card-body text-center p-4">
+                    <div class="fs-2 text-primary mb-2"><i class="bi bi-people"></i></div>
+                    <h6 class="fw-semibold mb-1">User-centric Design</h6>
+                    <p class="fs-sm text-muted mb-0">Intuitive experiences that drive engagement.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Services grid -->
-
+      <!-- Our Approach -->
       <section class="container py-5">
-        <h2 class="h1 text-center">Our Approach</h2>
-        <p class="text-center pb-4 mb-2 mb-lg-3">
-          How we build exceptional digital solutions that drive results
-        </p>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
-          <!-- Step 1: Understand the problem -->
-          <div class="col">
-            <a
-              class="card card-hover-primary border-0 h-100 text-decoration-none"
-              href="#"
-            >
-              <div class="card-body pb-0">
-                <div class="text-warning mb-4" style="font-size: 2.5rem">
-                  <i class="bi bi-search"></i>
+        <div class="text-center mb-5">
+          <h2 class="h1">Our Approach</h2>
+          <p class="fs-lg text-muted mx-auto" style="max-width: 600px">
+            How we build exceptional digital solutions that drive results
+          </p>
+        </div>
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-4">
+            <div class="card border-0 bg-light h-100">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary text-white fw-bold" style="width: 40px; height: 40px; font-size: 0.9rem;">01</span>
+                  <h5 class="card-title mb-0">Understand</h5>
                 </div>
-                <h3 class="h4 card-title mt-0">Understand the Problem</h3>
-                <p class="card-text">
-                  We begin by deeply analyzing your business challenges, goals,
-                  and user needs to ensure we build solutions that truly address
-                  your requirements.
+                <p class="card-text fs-sm text-muted mb-0">
+                  We analyze your business challenges, goals, and user needs to ensure we build exactly what you require.
                 </p>
               </div>
-              <div class="card-footer border-0 py-3 my-3 mb-sm-4">
-                <div
-                  class="btn btn-lg btn-icon btn-outline-primary rounded-circle pe-none"
-                >
-                  <i class="ai-arrow-right"></i>
-                </div>
-              </div>
-            </a>
+            </div>
           </div>
-
-          <!-- Step 2: Plan Smart Architecture -->
-          <div class="col">
-            <a
-              class="card card-hover-primary border-0 h-100 text-decoration-none"
-              href="#"
-            >
-              <div class="card-body pb-0">
-                <div class="text-warning mb-4" style="font-size: 2.5rem">
-                  <i class="bi bi-diagram-3"></i>
+          <div class="col-sm-6 col-lg-4">
+            <div class="card border-0 bg-light h-100">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary text-white fw-bold" style="width: 40px; height: 40px; font-size: 0.9rem;">02</span>
+                  <h5 class="card-title mb-0">Plan</h5>
                 </div>
-                <h3 class="h4 card-title mt-0">Plan Smart Architecture</h3>
-                <p class="card-text">
-                  Our technical architects design robust, scalable systems that
-                  grow with your business while maintaining performance and
-                  reliability.
+                <p class="card-text fs-sm text-muted mb-0">
+                  Our architects design robust, scalable systems that perform reliably and grow with your business.
                 </p>
               </div>
-              <div class="card-footer border-0 py-3 my-3 mb-sm-4">
-                <div
-                  class="btn btn-lg btn-icon btn-outline-primary rounded-circle pe-none"
-                >
-                  <i class="ai-arrow-right"></i>
-                </div>
-              </div>
-            </a>
+            </div>
           </div>
-
-          <!-- Step 3: Design for Clarity -->
-          <div class="col">
-            <a
-              class="card card-hover-primary border-0 h-100 text-decoration-none"
-              href="#"
-            >
-              <div class="card-body pb-0">
-                <div class="text-warning mb-4" style="font-size: 2.5rem">
-                  <i class="bi bi-palette"></i>
+          <div class="col-sm-6 col-lg-4">
+            <div class="card border-0 bg-light h-100">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary text-white fw-bold" style="width: 40px; height: 40px; font-size: 0.9rem;">03</span>
+                  <h5 class="card-title mb-0">Design</h5>
                 </div>
-                <h3 class="h4 card-title mt-0">Design for Clarity</h3>
-                <p class="card-text">
-                  We create intuitive, user-centered designs that enhance user
-                  experience while maintaining brand consistency and visual
-                  appeal.
+                <p class="card-text fs-sm text-muted mb-0">
+                  We create intuitive, user-centered designs that enhance experience while maintaining brand consistency.
                 </p>
               </div>
-              <div class="card-footer border-0 py-3 my-3 mb-sm-4">
-                <div
-                  class="btn btn-lg btn-icon btn-outline-primary rounded-circle pe-none"
-                >
-                  <i class="ai-arrow-right"></i>
-                </div>
-              </div>
-            </a>
+            </div>
           </div>
-
-          <!-- Step 4: Build Clean, Scalable Code -->
-          <div class="col">
-            <a
-              class="card card-hover-primary border-0 h-100 text-decoration-none"
-              href="#"
-            >
-              <div class="card-body pb-0">
-                <div class="text-warning mb-4" style="font-size: 2.5rem">
-                  <i class="bi bi-code-slash"></i>
+          <div class="col-sm-6 col-lg-4">
+            <div class="card border-0 bg-light h-100">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary text-white fw-bold" style="width: 40px; height: 40px; font-size: 0.9rem;">04</span>
+                  <h5 class="card-title mb-0">Build</h5>
                 </div>
-                <h3 class="h4 card-title mt-0">Build Clean, Scalable Code</h3>
-                <p class="card-text">
-                  Our developers write maintainable, efficient code following
-                  best practices to ensure your solution performs optimally and
-                  can scale seamlessly.
+                <p class="card-text fs-sm text-muted mb-0">
+                  We write clean, efficient code following best practices to ensure optimal performance and scalability.
                 </p>
               </div>
-              <div class="card-footer border-0 py-3 my-3 mb-sm-4">
-                <div
-                  class="btn btn-lg btn-icon btn-outline-primary rounded-circle pe-none"
-                >
-                  <i class="ai-arrow-right"></i>
-                </div>
-              </div>
-            </a>
+            </div>
           </div>
-
-          <!-- Step 5: Test Everything -->
-          <div class="col">
-            <a
-              class="card card-hover-primary border-0 h-100 text-decoration-none"
-              href="#"
-            >
-              <div class="card-body pb-0">
-                <div class="text-warning mb-4" style="font-size: 2.5rem">
-                  <i class="bi bi-check-circle"></i>
+          <div class="col-sm-6 col-lg-4">
+            <div class="card border-0 bg-light h-100">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary text-white fw-bold" style="width: 40px; height: 40px; font-size: 0.9rem;">05</span>
+                  <h5 class="card-title mb-0">Test</h5>
                 </div>
-                <h3 class="h4 card-title mt-0">Test Everything</h3>
-                <p class="card-text">
-                  We conduct comprehensive testing across all devices and
-                  scenarios to ensure flawless performance, security, and user
-                  satisfaction.
+                <p class="card-text fs-sm text-muted mb-0">
+                  Comprehensive testing across all devices and scenarios ensures flawless performance and security.
                 </p>
               </div>
-              <div class="card-footer border-0 py-3 my-3 mb-sm-4">
-                <div
-                  class="btn btn-lg btn-icon btn-outline-primary rounded-circle pe-none"
-                >
-                  <i class="ai-arrow-right"></i>
-                </div>
-              </div>
-            </a>
+            </div>
           </div>
-
-          <!-- Step 6: Support Long Term -->
-          <div class="col">
-            <a
-              class="card card-hover-primary border-0 h-100 text-decoration-none"
-              href="#"
-            >
-              <div class="card-body pb-0">
-                <div class="text-warning mb-4" style="font-size: 2.5rem">
-                  <i class="bi bi-headset"></i>
+          <div class="col-sm-6 col-lg-4">
+            <div class="card border-0 bg-light h-100">
+              <div class="card-body p-4">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary text-white fw-bold" style="width: 40px; height: 40px; font-size: 0.9rem;">06</span>
+                  <h5 class="card-title mb-0">Support</h5>
                 </div>
-                <h3 class="h4 card-title mt-0">Support Long Term</h3>
-                <p class="card-text">
-                  Our relationship continues after launch with ongoing
-                  maintenance, updates, and support to keep your solution
-                  running smoothly for years to come.
+                <p class="card-text fs-sm text-muted mb-0">
+                  Ongoing maintenance, updates, and support to keep your solution running smoothly for years.
                 </p>
               </div>
-              <div class="card-footer border-0 py-3 my-3 mb-sm-4">
-                <div
-                  class="btn btn-lg btn-icon btn-outline-primary rounded-circle pe-none"
-                >
-                  <i class="ai-arrow-right"></i>
-                </div>
-              </div>
-            </a>
+            </div>
           </div>
         </div>
       </section>
@@ -1114,7 +1012,7 @@
         <div class="container pb-4 mb-2 mb-lg-3 ">
           <h2 class="h1 text-center">Our clients</h2>
           <p class="text-center mb-5">
-            More than 30+ clients using Around to analyze data
+            Trusted by 30+ businesses worldwide for digital solutions
           </p>
         </div>
         <div
@@ -1234,284 +1132,7 @@
         </div>
       </section>
 
-      <!-- CEO quote + Process steps -->
-      <section class="overflow-hidden">
-        <div class="container pb-5 pt-3 pt-md-4 pt-lg-5 my-xl-3 my-xxl-5">
-          <div class="row pb-md-3 pb-lg-4 mb-2 mb-lg-3">
-            <!-- Company Values Intro with Additional Content -->
-            <div
-              class="col-md-5 d-flex flex-column align-items-center mb-4 mb-md-0"
-            >
-              <div class="position-relative" style="max-width: 416px">
-                <img
-                  class="d-block position-relative z-2"
-                  src="./assets/img/landing/business-consulting/industries/mobile-app-development.png"
-                  alt="Tech Vivanta Values"
-                />
-                <div
-                  class="bg-primary position-absolute start-0 bottom-0 w-100"
-                  style="
-                    height: 85.4%;
-                    border-radius: 2.25rem 8rem 2.25rem 2.25rem;
-                  "
-                ></div>
-              </div>
-              <div class="text-center text-md-start pt-3 mt-3">
-                <h2 class="mb-2">Our Core Values</h2>
-                <p class="fs-xl text-body-secondary mb-2">
-                  What Drives Tech Vivanta
-                </p>
-                <div class="position-relative pt-4" style="max-width: 500px">
-                  <div
-                    class="position-absolute top-0 start-0 w-100 text-center text-md-start ms-md-1"
-                  >
-                    <svg
-                      class="text-border"
-                      width="155"
-                      height="111"
-                      viewBox="0 0 155 111"
-                      fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M125.969 38.7937C129.372 30.2345 134.734 21.7781 141.902 13.6311C144.17 11.053 144.48 7.34066 142.623 4.45316C141.18 2.18441 138.808 0.94696 136.23 0.94696C135.508 0.94696 134.786 0.99826 134.064 1.25633C118.905 5.69065 83.4811 21.4171 82.5014 71.8454C82.1407 91.2842 96.3717 107.99 114.883 109.898C125.144 110.93 135.353 107.578 142.933 100.772C150.512 93.914 154.844 84.117 154.844 73.9077C154.844 56.8922 142.778 41.9905 125.969 38.7937Z"
-                      ></path>
-                      <path
-                        d="M32.5904 109.898C42.7999 110.93 53.0092 107.578 60.5888 100.772C68.1686 93.914 72.5 84.117 72.5 73.9077C72.5 56.8922 60.4342 41.9905 43.6248 38.7937C47.0281 30.2345 52.3905 21.7781 59.5578 13.6312C61.8265 11.0531 62.1359 7.34071 60.2794 4.45321C58.8358 2.18446 56.4638 0.947006 53.8857 0.947006C53.1641 0.947006 52.4421 0.998306 51.7202 1.25638C36.5608 5.6907 1.13734 21.4172 0.157654 71.8454V72.5671C0.157654 91.6968 14.2341 107.99 32.5904 109.898Z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <p class="fs-xl position-relative z-2 mb-0">
-                    At Tech Vivanta, our values guide our decisions, shape our
-                    culture, and help us deliver strong digital solutions that
-                    drive real growth.
-                  </p>
-                </div>
 
-                <!-- Additional Content - Why Values Matter -->
-                <div class="mt-5 pt-4">
-                  <div class="d-flex align-items-start mb-4">
-                    <div class="bg-primary rounded-circle p-2 me-3 mt-1">
-                      <i class="bi bi-check-lg text-white fs-5"></i>
-                    </div>
-                    <div>
-                      <h4 class="h6 mb-2">Proven Results</h4>
-                      <p class="text-body-secondary mb-0">
-                        Our value-driven approach has delivered 99.8% client
-                        success rate across 50+ custom solutions.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="d-flex align-items-start mb-4">
-                    <div class="bg-primary rounded-circle p-2 me-3 mt-1">
-                      <i class="bi bi-people text-white fs-5"></i>
-                    </div>
-                    <div>
-                      <h4 class="h6 mb-2">Team Excellence</h4>
-                      <p class="text-body-secondary mb-0">
-                        20+ experts united by shared values, delivering
-                        consistent quality across all projects.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="d-flex align-items-start">
-                    <div class="bg-primary rounded-circle p-2 me-3 mt-1">
-                      <i class="bi bi-graph-up-arrow text-white fs-5"></i>
-                    </div>
-                    <div>
-                      <h4 class="h6 mb-2">Sustainable Growth</h4>
-                      <p class="text-body-secondary mb-0">
-                        8+ years of experience building solutions that scale and
-                        evolve with your business needs.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Call to Action -->
-                <div class="bg-light rounded-4 p-4 mt-4">
-                  <h4 class="h5 mb-3">Ready to Build Together?</h4>
-                  <p class="text-body-secondary mb-3">
-                    Let's discuss how our values-driven approach can transform
-                    your digital presence.
-                  </p>
-                  <a href="#" class="btn btn-primary w-100"
-                    >Start Your Project</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- Values -->
-            <div class="col-md-7 col-lg-6 col-xxl-5 offset-lg-1 offset-xxl-2">
-              <div class="ps-md-4 ps-lg-0">
-                <!-- Quality -->
-                <div
-                  class="position-relative d-flex justify-content-end my-3 py-1"
-                  data-aos="fade-left"
-                  data-aos-easing="ease-out-back"
-                >
-                  <div
-                    class="btn btn-lg btn-icon btn-primary fs-xl fw-bold rounded-circle position-absolute top-50 start-0 translate-middle-y z-2 pe-none"
-                  >
-                    01
-                  </div>
-                  <div
-                    class="card border-0 ps-3"
-                    style="width: calc(100% - 1.75rem)"
-                  >
-                    <div class="card-body ps-4">
-                      <h3 class="h5 card-title pb-2 mb-1">Quality</h3>
-                      <p class="card-text">
-                        We deliver exceptional, bug-free code and designs that
-                        exceed expectations and stand the test of time.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Transparency -->
-                <div
-                  class="position-relative d-flex justify-content-end my-3 py-1"
-                  data-aos="fade-left"
-                  data-aos-easing="ease-out-back"
-                  data-aos-delay="250"
-                >
-                  <div
-                    class="btn btn-lg btn-icon btn-primary fs-xl fw-bold rounded-circle position-absolute top-50 start-0 translate-middle-y z-2 pe-none"
-                  >
-                    02
-                  </div>
-                  <div
-                    class="card border-0 ps-3"
-                    style="width: calc(100% - 1.75rem)"
-                  >
-                    <div class="card-body ps-4">
-                      <h3 class="h5 card-title pb-2 mb-1">Transparency</h3>
-                      <p class="card-text">
-                        Clear communication, honest timelines, and open
-                        collaboration ensure we build trust with every client.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Long-term Thinking -->
-                <div
-                  class="position-relative d-flex justify-content-end my-3 py-1"
-                  data-aos="fade-left"
-                  data-aos-easing="ease-out-back"
-                  data-aos-delay="500"
-                >
-                  <div
-                    class="btn btn-lg btn-icon btn-primary fs-xl fw-bold rounded-circle position-absolute top-50 start-0 translate-middle-y z-2 pe-none"
-                  >
-                    03
-                  </div>
-                  <div
-                    class="card border-0 ps-3"
-                    style="width: calc(100% - 1.75rem)"
-                  >
-                    <div class="card-body ps-4">
-                      <h3 class="h5 card-title pb-2 mb-1">
-                        Long-term Thinking
-                      </h3>
-                      <p class="card-text">
-                        We build scalable solutions that grow with your business
-                        and provide lasting value for years to come.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Innovation -->
-                <div
-                  class="position-relative d-flex justify-content-end my-3 py-1"
-                  data-aos="fade-left"
-                  data-aos-easing="ease-out-back"
-                  data-aos-delay="700"
-                >
-                  <div
-                    class="btn btn-lg btn-icon btn-primary fs-xl fw-bold rounded-circle position-absolute top-50 start-0 translate-middle-y z-2 pe-none"
-                  >
-                    04
-                  </div>
-                  <div
-                    class="card border-0 ps-3"
-                    style="width: calc(100% - 1.75rem)"
-                  >
-                    <div class="card-body ps-4">
-                      <h3 class="h5 card-title pb-2 mb-1">Innovation</h3>
-                      <p class="card-text">
-                        We stay ahead of technology trends to deliver
-                        cutting-edge solutions that give you a competitive
-                        advantage.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Responsibility -->
-                <div
-                  class="position-relative d-flex justify-content-end my-3 py-1"
-                  data-aos="fade-left"
-                  data-aos-easing="ease-out-back"
-                  data-aos-delay="900"
-                >
-                  <div
-                    class="btn btn-lg btn-icon btn-primary fs-xl fw-bold rounded-circle position-absolute top-50 start-0 translate-middle-y z-2 pe-none"
-                  >
-                    05
-                  </div>
-                  <div
-                    class="card border-0 ps-3"
-                    style="width: calc(100% - 1.75rem)"
-                  >
-                    <div class="card-body ps-4">
-                      <h3 class="h5 card-title pb-2 mb-1">Responsibility</h3>
-                      <p class="card-text">
-                        We take ownership of our work and are committed to
-                        delivering on our promises with integrity and
-                        dedication.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- User-centric Design -->
-                <div
-                  class="position-relative d-flex justify-content-end my-3 py-1"
-                  data-aos="fade-left"
-                  data-aos-easing="ease-out-back"
-                  data-aos-delay="1100"
-                >
-                  <div
-                    class="btn btn-lg btn-icon btn-primary fs-xl fw-bold rounded-circle position-absolute top-50 start-0 translate-middle-y z-2 pe-none"
-                  >
-                    06
-                  </div>
-                  <div
-                    class="card border-0 ps-3"
-                    style="width: calc(100% - 1.75rem)"
-                  >
-                    <div class="card-body ps-4">
-                      <h3 class="h5 card-title pb-2 mb-1">
-                        User-centric Design
-                      </h3>
-                      <p class="card-text">
-                        Every solution we create prioritizes intuitive user
-                        experiences that drive engagement and satisfaction.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
      
       <!-- CTA -->
@@ -1626,6 +1247,13 @@
                   <li class="nav-item">
                     <a
                       class="nav-link fw-normal px-0 py-1"
+                      href="./blog.html"
+                      >Blog</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link fw-normal px-0 py-1"
                       href="./contact.html"
                       >Contact</a
                     >
@@ -1643,14 +1271,14 @@
                     >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link fw-normal px-0 py-1" href="./terms.html"
+                    <a class="nav-link fw-normal px-0 py-1" href="./legal/terms.html"
                       >Terms of service</a
                     >
                   </li>
                   <li class="nav-item">
                     <a
                       class="nav-link fw-normal px-0 py-1"
-                      href="./privacy-policy.html"
+                      href="./legal/privacy-policy.html"
                       >Privacy policy</a
                     >
                   </li>
@@ -1662,14 +1290,14 @@
                   <li class="nav-item">
                     <a
                       class="nav-link fw-normal px-0 py-1"
-                      href="mailto:email@example.com"
+                      href="mailto:techvivanta.app@gmail.com"
                       >techvivanta.app@gmail.com</a
                     >
                   </li>
                   <li class="nav-item">
                     <a
                       class="nav-link fw-normal px-0 py-1"
-                      href="tel:+15262200444"
+                      href="tel:+917990269840"
                       >+91 79902 69840</a
                     >
                   </li>
@@ -1705,10 +1333,9 @@
               <p
                 class="nav fs-sm order-sm-1 text-center text-sm-start pt-4 pt-sm-0 mb-0 me-4"
               >
-                <span class="text-body-secondary"
-                  >&copy; All rights reserved. Made by
-                  <span class="text-primary fw-bold"> TechVivanta Team</span>
-                </span>
+                  <span class="text-body-secondary"
+                    >&copy; 2025 TechVivanta. All rights reserved.
+                  </span>
               </p>
             </div>
           </div>
@@ -1803,8 +1430,8 @@
           }
         );
 
-        // Observe the section container
-        const statsSection = document.querySelector(".bg-light.rounded-5");
+        // Observe the stats section
+        const statsSection = document.querySelector("#statsSection");
         if (statsSection) {
           observer.observe(statsSection);
         }
@@ -1819,5 +1446,40 @@
     <script src="assets/js/theme.min.js"></script>
 
     <script src="assets/js/customNavButton.js"></script>
+
+    <!-- WhatsApp Floating Button -->
+    <a
+      href="https://wa.me/917990269840?text=Hi%20TechVivanta!%20I'd%20like%20to%20know%20more%20about%20your%20services."
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="bi bi-whatsapp"></i>
+    </a>
+    <style>
+      .whatsapp-float {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        width: 56px;
+        height: 56px;
+        background-color: #25D366;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+        z-index: 999;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        color: #fff;
+      }
+    </style>
   </body>
 </html>

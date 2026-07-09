@@ -10,16 +10,21 @@
     />
 
     <!-- SEO meta tags -->
-    <title>Around | 404 Error v.1</title>
+    <title>Page Not Found | TechVivanta – Software Development Company</title>
     <meta
       name="description"
-      content="Around - Multipurpose Bootstrap HTML Template"
+      content="The page you are looking for does not exist. Return to TechVivanta homepage to explore our web, mobile, AI, and blockchain development services."
     />
-    <meta
-      name="keywords"
-      content="bootstrap, business, corporate, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, saas, multipurpose, product landing, shop, software, ui kit, web studio, landing, light and dark mode, html5, css3, javascript, gallery, slider, touch, creative"
-    />
-    <meta name="author" content="Createx Studio" />
+    <meta name="author" content="TechVivanta" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
 
     <!-- Webmanifest + Favicon / App icons -->
     <link rel="manifest" href="/manifest.json" />
@@ -41,6 +46,12 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
       id="google-font"
+    />
+
+    <!-- bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
     />
 
     <!-- Font icons -->
@@ -180,6 +191,41 @@
 
     <!-- Bootstrap + Theme scripts -->
     <script src="assets/js/theme.min.js"></script>
+
+    <!-- WhatsApp Floating Button -->
+    <a
+      href="https://wa.me/917990269840?text=Hi%20TechVivanta!%20I%5C'd%20like%20to%20know%20more%20about%20your%20services."
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="bi bi-whatsapp"></i>
+    </a>
+    <style>
+      .whatsapp-float {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        width: 56px;
+        height: 56px;
+        background-color: #25D366;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+        z-index: 999;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        color: #fff;
+      }
+    </style>
 
     <!-- Customizer -->
     <script src="assets/js/customizer.min.js"></script>
